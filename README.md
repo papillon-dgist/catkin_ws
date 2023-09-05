@@ -57,9 +57,17 @@ If no error appears, that means ROS had installed correctly.
 
 
 # Gripper Preperation
-download this repository to ~ so that you would have ~/catkin_ws folder
+### Make catkin_ws folder
 
-`git remote add origin https://github.com/papillon-dgist/catkin_ws.git`
+    mkdir ~/catkin_ws
+    cd ~/catkin_ws
+
+initialize git and download this repository to ~ so that you would have ~/catkin_ws folder
+
+    git init
+    git remote add origin https://github.com/papillon-dgist/catkin_ws.git
+    git checkout main
+    git pull
 
 checking user_group name: find the group name for you. @USER must be changed to the user name that you are using
 
