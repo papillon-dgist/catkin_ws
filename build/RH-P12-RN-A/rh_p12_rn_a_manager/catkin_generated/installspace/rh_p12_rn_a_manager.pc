@@ -1,8 +1,0 @@
-prefix=/home/soohan/catkin_ws/install
-
-Name: rh_p12_rn_a_manager
-Description: Description of rh_p12_rn_a_manager
-Version: 0.1.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp robotis_controller_msgs cmake_modules dynamixel_sdk robotis_framework_common robotis_device robotis_controller rh_p12_rn_a_base_module

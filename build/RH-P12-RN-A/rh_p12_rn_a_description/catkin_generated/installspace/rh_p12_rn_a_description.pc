@@ -1,8 +1,0 @@
-prefix=/home/soohan/catkin_ws/install
-
-Name: rh_p12_rn_a_description
-Description: Description of rh_p12_rn_a_description
-Version: 0.1.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp sensor_msgs
