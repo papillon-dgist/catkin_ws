@@ -139,3 +139,11 @@ this process may take time. Then execute the following commands
 
     roslaunch rh_p12_rn_a_manager rh_p12_rn_a_manager.launch
     rosrun rh_p12_rn_a_gui rh_p12_rn_a_gui
+
+### If Error occurs like:
+
+`[~] is neither a launch file in package [~] nor is [~] a launch file name`
+
+then try
+
+`source ~/catkin_ws/devel/setup.bash`
