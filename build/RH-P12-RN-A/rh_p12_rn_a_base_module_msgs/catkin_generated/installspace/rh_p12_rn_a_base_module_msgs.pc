@@ -1,0 +1,8 @@
+prefix=/home/soohan/catkin_ws/install
+
+Name: rh_p12_rn_a_base_module_msgs
+Description: Description of rh_p12_rn_a_base_module_msgs
+Version: 0.1.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs message_runtime
