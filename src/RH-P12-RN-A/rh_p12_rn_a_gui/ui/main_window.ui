@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0">
+<ui version="4.0">  /// This file is modified by Soohan Ro @ DGIST (papillon@dgist.ac.kr) and Taehi Jang @ DGIST (taehijang@dgist.ac.kr)
  <class>MainWindowDesign</class>
  <widget class="QMainWindow" name="MainWindowDesign">
   <property name="geometry">
