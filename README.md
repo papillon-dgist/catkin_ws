@@ -147,3 +147,7 @@ this process may take time. Then execute the following commands
 then try
 
 `source ~/catkin_ws/devel/setup.bash`
+
+`rospack profile`
+
+`rospack find package_name`
