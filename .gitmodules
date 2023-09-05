@@ -1,0 +1,9 @@
+[submodule "src/DynamixelSDK"]
+	path = src/DynamixelSDK
+	url = https://github.com/ROBOTIS-GIT/DynamixelSDK
+[submodule "src/ROBOTIS-Framework"]
+	path = src/ROBOTIS-Framework
+	url = https://github.com/ROBOTIS-GIT/ROBOTIS-Framework
+[submodule "src/ROBOTIS-Framework-msgs"]
+	path = src/ROBOTIS-Framework-msgs
+	url = https://github.com/ROBOTIS-GIT/ROBOTIS-Framework-msgs
