@@ -148,6 +148,7 @@ then try
 
 `source ~/catkin_ws/devel/setup.bash`
 
-`rospack profile`
+if this works, you can automate this with the following commands
+    echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+    source ~/.bashrc
 
-`rospack find package_name`
