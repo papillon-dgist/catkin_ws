@@ -340,14 +340,14 @@ Position</string>
           <item row="7" column="0"> /// Change 6: Additional Row
            <widget class="QLabel" name="label_goal_time"> /// Change 7
             <property name="text"> /// Change 8
-             <string>Time(s)</string> /// Change 9
+             <string>Time(ms)</string> /// Change 9
             </property> /// Change 10
            </widget> /// Change 11
           </item> /// Change 12
           <item row="7" column="1"> /// Change 13
            <widget class="QSlider" name="goal_time_slider"> /// Change 14
             <property name="maximum"> /// Change 15
-             <number>1000</number> /// Change 16: Time Value maximum 1000 (for seconds) or 1000000 (for milliseconds)
+             <number>1000000</number> /// Change 16: Time Value maximum 1000 (for seconds) or 1000000 (for milliseconds)
             </property> /// Change 17
             <property name="orientation"> /// Change 18
              <enum>Qt::Horizontal</enum> /// Change 19
@@ -357,14 +357,14 @@ Position</string>
           <item row="7" column="2"> /// Change 23
            <widget class="QSpinBox" name="goal_time_spin"> /// Change 24
             <property name="maximum"> /// Change 25
-             <number>1000</number> /// Change 26: Time Value maximum 1000 or 1000000
+             <number>1000000</number> /// Change 26: Time Value maximum 1000 or 1000000
             </property> /// Change 27
            </widget> /// Change 28
           </item> /// Change 29
           <item row="7" column="3"> /// Change 30
            <widget class="QLabel" name="label_max_goal_time"> /// Change 31
             <property name="text"> /// Change 32
-             <string>/ 1000</string> /// Change 33: Time Value maximum 1000 or 1000000
+             <string>/ 1000000</string> /// Change 33: Time Value maximum 1000 or 1000000
             </property> /// Change 34
            </widget> /// Change 35
           </item> /// Change 36
