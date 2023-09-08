@@ -1,5 +1,7 @@
 # ROS
-ROS work done by papillon@dgist.ac.kr
+ROS work done by Soohan Ro @ DGIST (papillon@dgist.ac.kr)
+### Contributor
+Taehi Jang @ DGIST (taehijang@dgist.ac.kr)
 
 # Installing ROS noetic on ubuntu 20.04
 Find packages from packages.ros.org
