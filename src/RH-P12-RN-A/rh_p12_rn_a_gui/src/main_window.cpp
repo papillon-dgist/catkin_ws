@@ -67,10 +67,11 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent)
   ui.position_mode_radio->click();
 
   //ui.goal_current_slider->setValue(qnode.getItemValue("goal_current"));
-  ui.goal_current_slider->setValue(350);
+  ui.goal_current_slider->setValue(30);  // Change 1: Initial goal_current value 350 to 30
   ui.goal_vel_slider->setValue(qnode.getItemValue("goal_velocity"));
   ui.goal_pwm_slider->setValue(qnode.getItemValue("goal_pwm"));
   ui.goal_position_slider->setValue(qnode.getItemValue("goal_position"));
+  ui.goal_time_slider->setValue(qnode.getItemValue("goal_time"));  // Change 2: Addition of time slider
 }
 
 MainWindow::~MainWindow() {}
@@ -121,15 +122,19 @@ void MainWindow::on_position_mode_radio_clicked( bool check )
     ui.label_goal_velocity->setEnabled(true);
     ui.label_goal_pwm->setEnabled(true);
     ui.label_goal_position->setEnabled(true);
+    ui.label_goal_time->setEnabled(true);  // Change 3: Goal Time Label
     ui.goal_vel_slider->setEnabled(true);
     ui.goal_pwm_slider->setEnabled(true);
     ui.goal_position_slider->setEnabled(true);
+    ui.goal_time_slider->setEnabled(true);  // Change 4: Goal Time Slider
     ui.goal_vel_spin->setEnabled(true);
     ui.goal_pwm_spin->setEnabled(true);
     ui.goal_position_spin->setEnabled(true);
+    ui.goal_time_spin->setEnabled(true);  // Change 5: Goal Time Spin
     ui.label_max_goal_velocity->setEnabled(true);
     ui.label_max_goal_pwm->setEnabled(true);
     ui.label_max_goal_position->setEnabled(true);
+    ui.label_max_goal_time->setEnabled(true);  // Change 6: Goal Time Max
 
     ui.min_position_button->setText("Min (Open)\nPosition");
     ui.max_position_button->setText("Max (Close)\nPosition");
@@ -188,6 +193,10 @@ void MainWindow::on_current_mode_radio_clicked( bool check )
     ui.label_max_goal_velocity->setEnabled(false);
     //ui.label_max_goal_pwm->setEnabled(false);
     ui.label_max_goal_position->setEnabled(false);
+    //ui.label_goal_time->setEnabled(false);  // Change 7: UI Disable Option
+    //ui.goal_time_slider->setEnabled(false);  // Change 8: UI Disable Option
+    //ui.goal_time_spin->setEnabled(false);  // Change 9: UI Disable Option
+    //ui.label_max_time->setEnabled(false);  // Change 10: UI Disable Option
 
     ui.min_position_button->setText("OPEN");
     ui.max_position_button->setText("CLOSE");
@@ -197,6 +206,8 @@ void MainWindow::on_current_mode_radio_clicked( bool check )
 
     ui.goal_current_slider->setMinimum(-1984);
     ui.goal_current_spin->setMinimum(-1984);
+    ui.goal_time_slider->setMinimum(0);  // Change 11: Time Slider minimum 0
+    ui.goal_time_spin->setMinimum(0);  // Change 12: Time Spin minium 0
 
     curr_mode_ = 0;
   }
@@ -377,6 +388,9 @@ void *MainWindow::autoRepeatFunc(void *main_window)
         _msg.item_name = "goal_current";
         _msg.value.push_back( (_dir)? _main->ui.goal_current_spin->value():(-1)*(_main->ui.goal_current_spin->value()) );
         _main->qnode.setCtrlItem(_msg);
+        int sleep_time = _main->ui.goal_time_spin->value();  // Change 13: Sleep Time Value
+        //usleep(sleep_time*1000*1000);  // Change 14: Sleep for Sleep Time Seconds. usleep(TIME): sleep for TIME milliseconds
+        usleep(sleep_time*1000);  // Change 14-1: Sleep for Sleep Time MicroSeconds.
       }
       _dir = !_dir;
       _stop_cnt = 0;
