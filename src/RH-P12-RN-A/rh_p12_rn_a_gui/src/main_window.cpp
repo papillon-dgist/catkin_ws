@@ -362,7 +362,7 @@ void MainWindow::on_goal_position_button_clicked( bool check )
 
 void *MainWindow::autoRepeatFunc(void *main_window)
 {
-  const int _max_stop_cnt = 3;  // Change 14-2: max stop cnt change from 7 to 3
+  const int _max_stop_cnt = 2;  // Change 14-2: max stop cnt change from 7 to 2
   bool _dir = false;
   int _stop_cnt = 0;
   MainWindow *_main = (MainWindow*)main_window;
@@ -374,6 +374,7 @@ void *MainWindow::autoRepeatFunc(void *main_window)
     }
     else if(++_stop_cnt > _max_stop_cnt)
     {
+      ROS_INFO("++_stop_cnt");
       robotis_controller_msgs::SyncWriteItem _msg;
       _msg.joint_name.push_back("gripper");
       if(_main->ui.position_mode_radio->isChecked() == true)
