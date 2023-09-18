@@ -362,7 +362,7 @@ void MainWindow::on_goal_position_button_clicked( bool check )
 
 void *MainWindow::autoRepeatFunc(void *main_window)
 {
-  const int _max_stop_cnt = 7;  // Change 14-2: max stop cnt change from 7 to 7
+  const int _max_stop_cnt = 3;  // Change 14-2: max stop cnt change from 7 to 7
   bool _dir = false;
   int _stop_cnt = 0;
   MainWindow *_main = (MainWindow*)main_window;
@@ -375,7 +375,6 @@ void *MainWindow::autoRepeatFunc(void *main_window)
     }
     else if(++_stop_cnt > _max_stop_cnt)
     {
-      ROS_INFO("Move");
       robotis_controller_msgs::SyncWriteItem _msg;
       _msg.joint_name.push_back("gripper");
       if(_main->ui.position_mode_radio->isChecked() == true)
@@ -390,9 +389,10 @@ void *MainWindow::autoRepeatFunc(void *main_window)
         _msg.value.push_back( (_dir)? _main->ui.goal_current_spin->value():(-1)*(_main->ui.goal_current_spin->value()) );
         _main->qnode.setCtrlItem(_msg);
         sleep_time = _main->ui.goal_time_spin->value();  // Change 13: Sleep Time Value
-        //ROS_INFO("Sleep");  Change 14-3: ROS info for logging
+        ROS_INFO("Sleep");  // Change 14-3: ROS info for logging
         //usleep(sleep_time*1000*1000);  // Change 14: Sleep for Sleep Time Seconds. usleep(TIME): sleep for TIME milliseconds
         usleep(sleep_time*1000);  // Change 14-1: Sleep for Sleep Time MicroSeconds.
+        ROS_INFO("Sleep End");  // Change 14-4
       }
       _dir = !_dir;
       _stop_cnt = 0;
