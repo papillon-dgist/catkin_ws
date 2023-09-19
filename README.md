@@ -70,6 +70,7 @@ initialize git and download this repository to ~ so that you would have ~/catkin
     git remote add origin https://github.com/papillon-dgist/catkin_ws.git
     git checkout main
     git pull
+    git submodule update --init --recursive
 
 checking user_group name: find the group name for you. @USER must be changed to the user name that you are using
 
