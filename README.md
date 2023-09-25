@@ -3,8 +3,11 @@ ROS work done by Soohan Ro @ DGIST (papillon@dgist.ac.kr)
 ### Contributor
 Taehi Jang @ DGIST (taehijang@dgist.ac.kr)
 
-# Installing ROS noetic on ubuntu 20.04.6
+# Installing ROS noetic on Ubuntu 20.04.6
 ### Please check the version of Ubuntu
+There could be some errors for other versions of Ubuntu
+https://releases.ubuntu.com/focal/
+
 
 Find packages from packages.ros.org
 
