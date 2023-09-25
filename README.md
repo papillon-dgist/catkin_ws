@@ -141,6 +141,7 @@ this process may take time. Then execute the following commands
 # Run
 
     roslaunch rh_p12_rn_a_manager rh_p12_rn_a_manager.launch
+    Ctrl+Shift+t (Open new terminal)
     rosrun rh_p12_rn_a_gui rh_p12_rn_a_gui
 
 ### If Error occurs like:
