@@ -6,6 +6,7 @@ Taehi Jang @ DGIST (taehijang@dgist.ac.kr)
 # Installing ROS noetic on Ubuntu 20.04.6
 ### Please check the version of Ubuntu
 There could be some errors for other versions of Ubuntu
+
 https://releases.ubuntu.com/focal/
 
 
@@ -158,6 +159,7 @@ then try
 `source ~/catkin_ws/devel/setup.bash`
 
 if this works, you can automate this with the following commands
+
     echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
     source ~/.bashrc
 
