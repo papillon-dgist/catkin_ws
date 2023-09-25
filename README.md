@@ -3,7 +3,9 @@ ROS work done by Soohan Ro @ DGIST (papillon@dgist.ac.kr)
 ### Contributor
 Taehi Jang @ DGIST (taehijang@dgist.ac.kr)
 
-# Installing ROS noetic on ubuntu 20.04
+# Installing ROS noetic on ubuntu 20.04.6
+### Please check the version of Ubuntu
+
 Find packages from packages.ros.org
 
 `sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`
